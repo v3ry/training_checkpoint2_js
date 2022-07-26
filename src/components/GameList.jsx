@@ -14,7 +14,6 @@ function GameList() {
 
     return (
       <div className="GameList">
-
         {console.log(apiData)}
       </div>
     );
