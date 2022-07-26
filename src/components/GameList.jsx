@@ -1,5 +1,6 @@
 import axios from "axios";
 import React,{useState,useEffect} from "react";
+import Game from "./Game";
 
 function GameList() {
     const [apiData, setApiData] = useState([])
@@ -14,7 +15,12 @@ function GameList() {
 
     return (
       <div className="GameList">
-        {console.log(apiData)}
+        {/* {console.log(apiData)} */}
+        {apiData && apiData.map(game=>(
+            <Game val={game}/>
+            // console.log(game)
+        ))}
+        <Game/>
       </div>
     );
   }
