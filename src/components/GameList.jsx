@@ -16,8 +16,8 @@ function GameList() {
     return (
       <div className="GameList">
         {/* {console.log(apiData)} */}
-        {apiData && apiData.map(game=>(
-            <Game val={game}/>
+        {apiData && apiData.map((game,index)=>(
+            <Game key={"list"+index} val={game} />
             // console.log(game)
         ))}
         <Game/>
