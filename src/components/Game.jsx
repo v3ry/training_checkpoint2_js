@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Game(props) {
     return (
       <div className="Game">
@@ -12,6 +14,7 @@ function Game(props) {
             {props.val.genres.map((val,index)=>(
                 <p key={"game" + index}>{val.name}</p>
             ))}
+            <Link to={`/games/${props.val.id}`}><button>More</button></Link>
         </div>
     }
       </div>
